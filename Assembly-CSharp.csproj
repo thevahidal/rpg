@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0BE8E511-D506-A1D0-E67D-923A5ED26D39}</ProjectGuid>
+    <ProjectGuid>{94C708C1-5F9E-2648-E605-8D49286552FD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,23 +53,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\FollowCamera.cs" />
-     <Compile Include="Assets\Scripts\Mover.cs" />
+     <Compile Include="Assets\Scripts\Combat\CombatTarget.cs" />
+     <Compile Include="Assets\Scripts\Combat\Fighter.cs" />
+     <Compile Include="Assets\Scripts\Combat\Health.cs" />
+     <Compile Include="Assets\Scripts\Control\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Core\ActionScheduler.cs" />
+     <Compile Include="Assets\Scripts\Core\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Core\IAction.cs" />
+     <Compile Include="Assets\Scripts\Movement\Mover.cs" />
+     <None Include="Assets\Asset Packs\Animations\README - Usage Rights for these assets 1.txt" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/al/dev/RPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/al/dev/RPG/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/al/dev/RPG/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/al/dev/RPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/home/al/dev/RPG/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/al/Unity/Hub/Editor/2018.4.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -276,7 +283,7 @@
  <HintPath>/home/al/Unity/Hub/Editor/2018.4.23f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/home/al/dev/RPG/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/home/al/dev/rpg/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/al/Unity/Hub/Editor/2018.4.23f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
