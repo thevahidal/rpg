@@ -8,22 +8,27 @@ using RPG.Core;
 namespace RPG.Movement {
   public class Mover : MonoBehaviour, IAction {
     NavMeshAgent navMeshAgent;
-
+    Health health;
+    [SerializeField] float maxSpeed = 6f;
+    
     private void Start() {
       navMeshAgent = GetComponent<NavMeshAgent>();
+      health = GetComponent<Health>();
     }
 
     void Update() {
+      navMeshAgent.enabled = !health.IsDead();
       UpdateAnimator();
     }
 
-    public void StartMoveAction(Vector3 destination) {
+    public void StartMoveAction(Vector3 destination, float speedFraction) {
       GetComponent<ActionScheduler>().StartAction(this);
-      MoveTo(destination);
+      MoveTo(destination, speedFraction);
     }
 
-    public void MoveTo(Vector3 destination) {
+    public void MoveTo(Vector3 destination, float speedFraction) {
       navMeshAgent.destination = destination;
+      navMeshAgent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
       navMeshAgent.isStopped = false;
     }
 
